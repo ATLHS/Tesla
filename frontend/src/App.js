@@ -1,0 +1,59 @@
+import React, {useState, useEffect} from 'react';
+import Home from './components/Home';
+import {BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import DesktopNavbar from './components/layout/DesktopNavbar';
+import MobileNavbar from './components/layout/MobileNavbar';
+import Energy from './components/Energy';
+import ModelS from './components/ModelS';
+import Model3 from './components/Model3';
+import ModelY from './components/ModelY';
+import Cybertruk from './components/Cybertruk';
+import Roadster from './components/Roadster';
+import ModelX from './components/ModelX';
+import Contact from './components/Contact';
+
+function App() {  
+    const [toggle, setToggle] = useState(false);
+    const [navColor, setNavColor] = useState("white");
+    return (
+      <div className="container-fluid p-0 position-relative overflow-hidden">
+      <Router>
+        <DesktopNavbar breakpoint={750} blackNavItem={() => setNavColor("black")} whiteNavItem={() => setNavColor("white")} linkColor={navColor} enableMobileMenu={() => setToggle(!toggle)} />
+        <MobileNavbar mobileNavStatut={toggle} blackNavItem={() => setNavColor("black")} whiteNavItem={() => setNavColor("white")} linkColor={navColor} enableMobileMenu={() => setToggle(!toggle)}/>
+        <Switch>
+          <Route path="/models">
+              <ModelS breakpoint={750} />
+          </Route>
+          <Route path="/model3">
+              <Model3 breakpoint={750} />
+          </Route>
+          <Route path="/modelx">
+              <ModelX breakpoint={750} />
+          </Route>
+          <Route path="/modely">
+              <ModelY breakpoint={750} />
+          </Route>
+          <Route path="/cybertruk">
+              <Cybertruk breakpoint={750} />
+          </Route>
+          <Route path="/roadster">
+              <Roadster breakpoint={750} />
+          </Route>
+          <Route path="/energy">
+              <Energy breakpoint={750} />
+          </Route>
+          <Route path="/contact" >
+              <Contact breakpoint={750} />
+          </Route>
+          <Route path="/">
+              <Home breakpoint={750} />
+          </Route>
+        </Switch>
+      </Router>  
+      </div>
+     );
+  }
+
+export default App;
+
+

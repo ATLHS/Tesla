@@ -1,0 +1,11 @@
+video
+{
+    object-fit: cover;
+}
+@media (max-width: 760px)
+{
+    video
+    {
+        object-fit: fill;
+    }
+}

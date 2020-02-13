@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+.navbar
+{
+    position: absolute;
+    z-index: 1;
+}
+.nav-link
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.burger
+{
+    width: 40px !important;
+    height: 35px;
+}
+
+@media (max-width: 750px)
+{
+    .desktopNav
+    {
+        display: none;
+    }
+}
+

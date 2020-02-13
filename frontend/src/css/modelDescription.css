@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+.modelDescription
+{
+    top: 80%;
+}
+hr
+{
+    height: 70px !important;
+    width: 1px;
+}
+.modelInfo
+{
+    font-size: 15px; 
+}
+.technical
+{
+    font-size: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
+}
+@media (max-width: 750px)
+{
+    .modelInfo
+    {
+        font-size: 14px;
+        white-space: pre-line;
+    }  
+    .technical
+    {
+        font-size: 1.3rem;
+    }
+    .modelDescription .cta
+    {
+        margin-top: 16px;
+    }
+    .modelDescription
+    {
+        top: 65%;
+    }
+    
+}

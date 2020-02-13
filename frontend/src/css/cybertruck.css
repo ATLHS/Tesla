@@ -1,0 +1,30 @@
+.cybertruckInfo
+{
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    filter: brightness(1.75);
+    margin-top: 38% !important; 
+}
+.cybertruckSvg
+{
+    width: 30%;
+}
+.cybertruckCta
+{
+    border-width: 3px !important;
+    white-space: nowrap;
+}
+@media (max-width: 750px)
+{
+    .cybertruckInfo
+    {
+        margin-top: 100% !important;
+    }
+    .cybertruckSvg
+    {
+        width: 75%;
+        margin-top: 10% !important;
+    }
+}

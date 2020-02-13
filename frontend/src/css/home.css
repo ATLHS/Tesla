@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+.models
+{
+    object-fit: cover;
+}
+.carousel-caption
+{
+    top: 15%;
+}
+.modelsName
+{
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-top: -4%;
+}
+.btn-row
+{
+    z-index: 1000;
+    top: 25%;
+}
+.modelsQuotes
+{
+    display: none;
+}
+.cta
+{
+    width: 19%;
+    border: solid 3px;
+}
+.visit-store
+{
+    text-decoration: underline; 
+    font-size: 13px;
+}
+@media (max-width: 750px)
+{
+    .modelsName
+    {
+        font-size: 30px;
+        margin-top: -18%;
+        margin-bottom: 0;
+    }
+    .cta
+    {
+        top: 30%;
+        width: 85%;
+    }
+    .btn-row
+    {
+        top: 70%;
+    }
+    .modelsQuotes
+    {
+        display: block;
+    }
+    
+}
