@@ -3,11 +3,12 @@ const express = require('express');
 const app = express();
 const bodyParser= require('body-parser');
 const mongoose = require('mongoose');
-const port = process.env.port || 5000;
+const port = process.env.PORT || 5000;
+const uri = process.env.MONGODB_URI;
 const emailRouter = require('./routes/email');
 
 // Mongoose connection
-mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true});
 const connection = mongoose.connection;
 
 connection.on('error', console.error.bind(console, 'connection error:'));
