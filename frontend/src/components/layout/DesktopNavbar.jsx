@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,7 +6,6 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import '../../css/navbar.css';
 
 const DesktopNavbar = (props) => { 
-    // const [linkColor, setlinkColor] = useState("text-white");
 
     // Contact link
     const contactLink = <Link style={{color: props.linkColor  }} className={`nav-link`} to="/contact" onClick={props.blackNavItem}>CONTACT</Link>;
@@ -14,7 +13,6 @@ const DesktopNavbar = (props) => {
     const faBarsLink = <FontAwesomeIcon style={{color: props.linkColor  }} className="nav-link burger" icon={faBars} size="sm" onClick={props.enableMobileMenu}/>;
     const button = window.innerWidth > props.breakpoint ? contactLink : faBarsLink;
 
-    
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-transparent w-100">
             <div className="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">

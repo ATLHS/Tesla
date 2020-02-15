@@ -13,14 +13,14 @@ const hbs = require('nodemailer-handlebars');
 
 router.post('/', (req, res) => {
     const body = req.body;
-    // const email = new Email({
-    //     name: body.name,
-    //     email: body.email,
-    //     message: body.message
-    // })
-    // email.save()
-    // .then(() => res.json(true))
-    // .catch(err => console.log(err));
+    const email = new Email({
+        name: body.name,
+        email: body.email,
+        message: body.message
+    })
+    email.save()
+    .then(() => res.json(true))
+    .catch(err => console.log(err));
 
     //Creating transport instance
     const transporter = nodemailer.createTransport({
