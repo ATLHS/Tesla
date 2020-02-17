@@ -4,7 +4,6 @@ import '../css/contact.css';
 
 
 const Contact = () => {
-
     const {handleChange, values, handleSubmit, isSent, name} = useForm('/contact', {name: "", email: "", message: ""});
     return (
         <div className="row mt-5">

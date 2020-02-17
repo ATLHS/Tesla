@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import 'mapbox-gl/dist/mapbox-gl.css';
 import Home from './components/Home';
 import {BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import DesktopNavbar from './components/layout/DesktopNavbar';

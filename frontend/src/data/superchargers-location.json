@@ -1,0 +1,625 @@
+{
+    "nhits":42,
+    "parameters":{
+    "dataset":"caracteristiques-et-localisation-des-stations-de-recharge-supercharger-tesla",
+    "timezone":"UTC",
+    "rows":20,
+    "format":"json",
+    "lang":"France",
+    "facet":[
+    "nom_station",
+    "type_charge",
+    "type_connecteur"
+    ]
+    },
+    "records":[
+    {
+        "datasetid":"caracteristiques-et-localisation-des-stations-de-recharge-supercharger-tesla",
+        "recordid":"3eae401b7a6ee3cd5a3c0eab06949a7aeda11985",
+        "fields":{
+        "type_charge":"rapide - Supercharger",
+        "nom_station":"TESLA Supercharger Mercure Brive-la-Gaillarde",
+        "observation":"Compatible uniquement avec les Model S Tesla",
+        "longitude_wgs84":"1.483119",
+        "adresse_station":"Le Griffolet, 19270 Ussac",
+        "type_connecteur":"T2-T2-T2-T2-T2-T2-T2-T2",
+        "date_maj":"21 juillet 2016",
+        "id_station":"TESLA Supercharger Brive-la-Gaillarde",
+        "nbre_pdc":8,
+        "latitude_wgs84":"45.16724",
+        "nom_porteur":"TESLA MOTORS",
+        "coordonnees":[
+        45.16724,
+        1.483118999999999
+        ]
+        },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    1.483118999999999,
+    45.16724
+    ]
+    },
+    "record_timestamp":"2016-09-20T22:44:52.978000+00:00"
+    },
+    {
+    "datasetid":"caracteristiques-et-localisation-des-stations-de-recharge-supercharger-tesla",
+    "recordid":"f91c6be9d43282fd62709e37b185f10a03b6abf8",
+    "fields":{
+    "type_charge":"rapide - Supercharger",
+    "nom_station":"TESLA Supercharger Golden Tulip Mulhouse",
+    "observation":"Compatible uniquement avec les Model S Tesla",
+    "longitude_wgs84":"7.388082",
+    "adresse_station":"26 Route départementale 201, 68390 Sausheim",
+    "type_connecteur":"T2-T2-T2-T2-T2-T2-T2-T2",
+    "date_maj":"21 juillet 2016",
+    "id_station":"TESLA Supercharger Mulhouse",
+    "nbre_pdc":8,
+    "latitude_wgs84":"47.781956",
+    "nom_porteur":"TESLA MOTORS",
+    "coordonnees":[
+    47.781956,
+    7.388082
+    ]
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    7.388082,
+    47.781956
+    ]
+    },
+    "record_timestamp":"2016-09-20T22:44:52.978000+00:00"
+    },
+    {
+    "datasetid":"caracteristiques-et-localisation-des-stations-de-recharge-supercharger-tesla",
+    "recordid":"1b3eebdecfb554a0058ac5f3455cc6b1b235aa1d",
+    "fields":{
+    "type_charge":"rapide - Supercharger",
+    "nom_station":"TESLA Supercharger Albaret Saint Marie",
+    "observation":"Compatible uniquement avec les Model S Tesla",
+    "longitude_wgs84":"3.253025",
+    "adresse_station":"Aire de la garde A75, 48200 Albaret-Sainte-Marie",
+    "type_connecteur":"T2-T2-T2-T2-T2-T2-T2-T2",
+    "date_maj":"21 juillet 2016",
+    "id_station":"TESLA Supercharger Albaret Saint Marie",
+    "nbre_pdc":8,
+    "latitude_wgs84":"44.870945",
+    "nom_porteur":"TESLA MOTORS",
+    "coordonnees":[
+    44.870945,
+    3.253025
+    ]
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    3.253025,
+    44.870945
+    ]
+    },
+    "record_timestamp":"2016-09-20T22:44:52.978000+00:00"
+    },
+    {
+    "datasetid":"caracteristiques-et-localisation-des-stations-de-recharge-supercharger-tesla",
+    "recordid":"7c82b69f29f7ea9fafb822efe5d381dc7f7652ae",
+    "fields":{
+    "type_charge":"rapide - Supercharger",
+    "nom_station":"TESLA Supercharger CC Orange Les Vignes",
+    "observation":"Compatible uniquement avec les Model S Tesla",
+    "longitude_wgs84":"4.851759",
+    "adresse_station":"Rue Cinsault, 84100 Orange",
+    "type_connecteur":"T2-T2-T2-T2-T2-T2-T2-T2",
+    "date_maj":"21 juillet 2016",
+    "id_station":"TESLA Supercharger Orange",
+    "nbre_pdc":8,
+    "latitude_wgs84":"44.112164",
+    "nom_porteur":"TESLA MOTORS",
+    "coordonnees":[
+    44.112164,
+    4.8517589999999995
+    ]
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    4.8517589999999995,
+    44.112164
+    ]
+    },
+    "record_timestamp":"2016-09-20T22:44:52.978000+00:00"
+    },
+    {
+    "datasetid":"caracteristiques-et-localisation-des-stations-de-recharge-supercharger-tesla",
+    "recordid":"6d048ef0dee887ab208ce56595640d20968bb9f4",
+    "fields":{
+    "type_charge":"rapide - Supercharger",
+    "nom_station":"TESLA Supercharger Novotel Bordeaux-Merignac",
+    "observation":"Compatible uniquement avec les Model S Tesla",
+    "longitude_wgs84":"-0.68083",
+    "adresse_station":"80 Avenue J. F. Kennedy, 33700 Merignac",
+    "type_connecteur":"T2-T2-T2-T2",
+    "date_maj":"21 juillet 2016",
+    "id_station":"TESLA Supercharger Bordeaux",
+    "nbre_pdc":4,
+    "latitude_wgs84":"44.834142",
+    "nom_porteur":"TESLA MOTORS",
+    "coordonnees":[
+    44.834142,
+    -0.68083
+    ]
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    -0.68083,
+    44.834142
+    ]
+    },
+    "record_timestamp":"2016-09-20T22:44:52.978000+00:00"
+    },
+    {
+    "datasetid":"caracteristiques-et-localisation-des-stations-de-recharge-supercharger-tesla",
+    "recordid":"d7765553b5b37b62f6fd5bbe1493645a2650f559",
+    "fields":{
+    "type_charge":"rapide - Supercharger",
+    "nom_station":"TESLA Supercharger Novotel Rennes Alma",
+    "observation":"Compatible uniquement avec les Model S Tesla",
+    "longitude_wgs84":"-1.684341",
+    "adresse_station":"Allée d'Ukraine, 35200 Rennes",
+    "type_connecteur":"T2-T2-T2-T2",
+    "date_maj":"21 juillet 2016",
+    "id_station":"TESLA Supercharger Rennes",
+    "nbre_pdc":4,
+    "latitude_wgs84":"48.081796",
+    "nom_porteur":"TESLA MOTORS",
+    "coordonnees":[
+    48.081796,
+    -1.684340999999999
+    ]
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    -1.684340999999999,
+    48.081796
+    ]
+    },
+    "record_timestamp":"2016-09-20T22:44:52.978000+00:00"
+    },
+    {
+    "datasetid":"caracteristiques-et-localisation-des-stations-de-recharge-supercharger-tesla",
+    "recordid":"cbaa862a073b3f7581f974f599ac1411f180a592",
+    "fields":{
+    "type_charge":"rapide - Supercharger",
+    "nom_station":"TESLA Supercharger CC Leclerc Hauconcourt",
+    "observation":"Compatible uniquement avec les Model S Tesla",
+    "longitude_wgs84":"6.170791",
+    "adresse_station":"Rue de Maizières-les-Metz Hauconcourt, France 57280",
+    "type_connecteur":"T2-T2-T2-T2-T2-T2-T2-T2",
+    "date_maj":"21 juillet 2016",
+    "id_station":"TESLA Supercharger Metz",
+    "nbre_pdc":8,
+    "latitude_wgs84":"49.216414",
+    "nom_porteur":"TESLA MOTORS",
+    "coordonnees":[
+    49.216414,
+    6.170791
+    ]
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    6.170791,
+    49.216414
+    ]
+    },
+    "record_timestamp":"2016-09-20T22:44:52.978000+00:00"
+    },
+    {
+    "datasetid":"caracteristiques-et-localisation-des-stations-de-recharge-supercharger-tesla",
+    "recordid":"c7a1d2e092132e70c8c5d5fd8f8918cf44ca93c1",
+    "fields":{
+    "type_charge":"rapide - Supercharger",
+    "nom_station":"TESLA Supercharger Ibis Lyon Sud",
+    "observation":"Compatible uniquement avec les Model S Tesla",
+    "longitude_wgs84":"4.787807",
+    "adresse_station":"145 rue Pasteur - 38670 Chasse-sur-Rhône",
+    "type_connecteur":"T2-T2-T2-T2-T2-T2-T2-T2",
+    "date_maj":"21 juillet 2016",
+    "id_station":"TESLA Supercharger Vienne",
+    "nbre_pdc":8,
+    "latitude_wgs84":"45.58693",
+    "nom_porteur":"TESLA MOTORS",
+    "coordonnees":[
+    45.58693,
+    4.787807
+    ]
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    4.787807,
+    45.58693
+    ]
+    },
+    "record_timestamp":"2016-09-20T22:44:52.978000+00:00"
+    },
+    {
+    "datasetid":"caracteristiques-et-localisation-des-stations-de-recharge-supercharger-tesla",
+    "recordid":"3883bc3da6105d4663f0cd692d659be281abf2df",
+    "fields":{
+    "type_charge":"rapide - Supercharger",
+    "nom_station":"TESLA Supercharger Novotel Aix-en-Provence Pont de l'Arc",
+    "observation":"Compatible uniquement avec les Model S Tesla",
+    "longitude_wgs84":"5.456493",
+    "adresse_station":"Avenue Arc de Meyran, 13100 Aix-en-Provence",
+    "type_connecteur":"T2-T2-T2-T2",
+    "date_maj":"21 juillet 2016",
+    "id_station":"TESLA Supercharger Aix-en-provence",
+    "nbre_pdc":4,
+    "latitude_wgs84":"43.510682",
+    "nom_porteur":"TESLA MOTORS",
+    "coordonnees":[
+    43.510682,
+    5.456493
+    ]
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    5.456493,
+    43.510682
+    ]
+    },
+    "record_timestamp":"2016-09-20T22:44:52.978000+00:00"
+    },
+    {
+    "datasetid":"caracteristiques-et-localisation-des-stations-de-recharge-supercharger-tesla",
+    "recordid":"17c5accfb290f5224cfd6307feb8a9712fba3a13",
+    "fields":{
+    "type_charge":"rapide - Supercharger",
+    "nom_station":"TESLA Supercharger Novotel Clermont-Ferrand",
+    "observation":"Compatible uniquement avec les Model S Tesla",
+    "longitude_wgs84":"3.141488",
+    "adresse_station":"32-34 rue Georges Besse, 63100 Clermont-Ferrand",
+    "type_connecteur":"T2-T2-T2-T2-T2-T2-T2-T2",
+    "date_maj":"21 juillet 2016",
+    "id_station":"TESLA Supercharger Clermont-Ferrand",
+    "nbre_pdc":8,
+    "latitude_wgs84":"45.785937",
+    "nom_porteur":"TESLA MOTORS",
+    "coordonnees":[
+    45.785937,
+    3.141488
+    ]
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    3.141488,
+    45.785937
+    ]
+    },
+    "record_timestamp":"2016-09-20T22:44:52.978000+00:00"
+    },
+    {
+    "datasetid":"caracteristiques-et-localisation-des-stations-de-recharge-supercharger-tesla",
+    "recordid":"9a9ef8eb44497b103f4280d07fcf8f333c0b3709",
+    "fields":{
+    "type_charge":"rapide - Supercharger",
+    "nom_station":"TESLA Supercharger Novotel Lille-Lesquin",
+    "observation":"Compatible uniquement avec les Model S Tesla",
+    "longitude_wgs84":"3.089573",
+    "adresse_station":"55 route de Douai, 59810 Lille",
+    "type_connecteur":"T2-T2-T2-T2-T2-T2-T2-T2",
+    "date_maj":"21 juillet 2016",
+    "id_station":"TESLA Supercharger Lille",
+    "nbre_pdc":8,
+    "latitude_wgs84":"50.584316",
+    "nom_porteur":"TESLA MOTORS",
+    "coordonnees":[
+    50.584316,
+    3.089573
+    ]
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    3.089573,
+    50.584316
+    ]
+    },
+    "record_timestamp":"2016-09-20T22:44:52.978000+00:00"
+    },
+    {
+    "datasetid":"caracteristiques-et-localisation-des-stations-de-recharge-supercharger-tesla",
+    "recordid":"dbd4e316bd296b5e76a6d4f0938fc1e84cfa1934",
+    "fields":{
+    "type_charge":"rapide - Supercharger",
+    "nom_station":"TESLA Supercharger Hôtel Loreak",
+    "observation":"Compatible uniquement avec les Model S Tesla",
+    "longitude_wgs84":"-1.452564",
+    "adresse_station":"1 Chemin de Hayet, 64100 Bayonne",
+    "type_connecteur":"T2-T2-T2-T2-T2-T2-T2-T2",
+    "date_maj":"21 juillet 2016",
+    "id_station":"TESLA Supercharger Bayonne",
+    "nbre_pdc":8,
+    "latitude_wgs84":"43.493819",
+    "nom_porteur":"TESLA MOTORS",
+    "coordonnees":[
+    43.493819,
+    -1.452564
+    ]
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    -1.452564,
+    43.493819
+    ]
+    },
+    "record_timestamp":"2016-09-20T22:44:52.978000+00:00"
+    },
+    {
+    "datasetid":"caracteristiques-et-localisation-des-stations-de-recharge-supercharger-tesla",
+    "recordid":"32f1e1cf04c3dc482abfe0b71f67e7288f88fce9",
+    "fields":{
+    "type_charge":"rapide - Supercharger",
+    "nom_station":"TESLA Supercharger Hôtel de Mougins",
+    "observation":"Compatible uniquement avec les Model S Tesla",
+    "longitude_wgs84":"7.011155",
+    "adresse_station":"205 avenue du Golf, 06250 Mougins",
+    "type_connecteur":"T2-T2-T2-T2",
+    "date_maj":"21 juillet 2016",
+    "id_station":"TESLA Supercharger Mougins",
+    "nbre_pdc":4,
+    "latitude_wgs84":"43.603659",
+    "nom_porteur":"TESLA MOTORS",
+    "coordonnees":[
+    43.603659,
+    7.011155
+    ]
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    7.011155,
+    43.603659
+    ]
+    },
+    "record_timestamp":"2016-09-20T22:44:52.978000+00:00"
+    },
+    {
+    "datasetid":"caracteristiques-et-localisation-des-stations-de-recharge-supercharger-tesla",
+    "recordid":"819db32e478d8669b466c13cf88b383a2fb545e3",
+    "fields":{
+    "type_charge":"rapide - Supercharger",
+    "nom_station":"TESLA Supercharger La Maison Rouge",
+    "observation":"Compatible uniquement avec les Model S Tesla",
+    "longitude_wgs84":"5.949646",
+    "adresse_station":"61 rue de la République Barberaz, France 73000",
+    "type_connecteur":"T2-T2-T2-T2",
+    "date_maj":"21 juillet 2016",
+    "id_station":"TESLA Supercharger Chambéry Barberaz",
+    "nbre_pdc":4,
+    "latitude_wgs84":"45.56085",
+    "nom_porteur":"TESLA MOTORS",
+    "coordonnees":[
+    45.56085,
+    5.9496459999999995
+    ]
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    5.9496459999999995,
+    45.56085
+    ]
+    },
+    "record_timestamp":"2016-09-20T22:44:52.978000+00:00"
+    },
+    {
+    "datasetid":"caracteristiques-et-localisation-des-stations-de-recharge-supercharger-tesla",
+    "recordid":"5308d288fc6e38560e325ced558f84453c3b0821",
+    "fields":{
+    "type_charge":"rapide - Supercharger",
+    "nom_station":"TESLA Supercharger Hôtel Novotel Poissy Orgeval",
+    "observation":"Compatible uniquement avec les Model S Tesla",
+    "longitude_wgs84":"1.996508",
+    "adresse_station":"482 Route Des 40 Sous, 78630 Orgeval",
+    "type_connecteur":"T2-T2-T2-T2",
+    "date_maj":"21 juillet 2016",
+    "id_station":"TESLA Supercharger Orgeval",
+    "nbre_pdc":4,
+    "latitude_wgs84":"48.925026",
+    "nom_porteur":"TESLA MOTORS",
+    "coordonnees":[
+    48.925026,
+    1.996508
+    ]
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    1.996508,
+    48.925026
+    ]
+    },
+    "record_timestamp":"2016-09-20T22:44:52.978000+00:00"
+    },
+    {
+    "datasetid":"caracteristiques-et-localisation-des-stations-de-recharge-supercharger-tesla",
+    "recordid":"9a0af8fe16ffda9fd5cdc3094d7c9d49eb625d5f",
+    "fields":{
+    "type_charge":"rapide - Supercharger",
+    "nom_station":"TESLA Supercharger Novotel Narbonne",
+    "observation":"Compatible uniquement avec les Model S Tesla",
+    "longitude_wgs84":"2.986016",
+    "adresse_station":"130 Rue de L’Hôtellerie - 11100 Narbonne",
+    "type_connecteur":"T2-T2-T2-T2-T2-T2-T2-T2",
+    "date_maj":"21 juillet 2016",
+    "id_station":"TESLA Supercharger Narbonne",
+    "nbre_pdc":8,
+    "latitude_wgs84":"43.167686",
+    "nom_porteur":"TESLA MOTORS",
+    "coordonnees":[
+    43.167686,
+    2.9860160000000002
+    ]
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    2.9860160000000002,
+    43.167686
+    ]
+    },
+    "record_timestamp":"2016-09-20T22:44:52.978000+00:00"
+    },
+    {
+    "datasetid":"caracteristiques-et-localisation-des-stations-de-recharge-supercharger-tesla",
+    "recordid":"5a3a6ae842a5e975719f07709fc768a5b8ae7276",
+    "fields":{
+    "type_charge":"rapide - Supercharger",
+    "nom_station":"TESLA Supercharger Le Relais du bois Saint Georges - Saintes",
+    "observation":"Compatible uniquement avec les Model S Tesla",
+    "longitude_wgs84":"-0.661725",
+    "adresse_station":"132 Cours Genet, 17100 Saintes",
+    "type_connecteur":"T2-T2-T2-T2-T2-T2-T2-T2",
+    "date_maj":"21 juillet 2016",
+    "id_station":"TESLA Supercharger Saintes",
+    "nbre_pdc":8,
+    "latitude_wgs84":"45.750012",
+    "nom_porteur":"TESLA MOTORS",
+    "coordonnees":[
+    45.750012,
+    -0.661725
+    ]
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    -0.661725,
+    45.750012
+    ]
+    },
+    "record_timestamp":"2016-09-20T22:44:52.978000+00:00"
+    },
+    {
+    "datasetid":"caracteristiques-et-localisation-des-stations-de-recharge-supercharger-tesla",
+    "recordid":"e5914dbb69b6740e4a42ef5ad556ae40cb042c76",
+    "fields":{
+    "type_charge":"rapide - Supercharger",
+    "nom_station":"TESLA Supercharger Relais Saint-Jacques",
+    "observation":"Compatible uniquement avec les Model S Tesla",
+    "longitude_wgs84":"1.716028",
+    "adresse_station":"Route départementale 920 - face aéroport, 36130 Coings",
+    "type_connecteur":"T2-T2-T2-T2-T2-T2-T2-T2",
+    "date_maj":"21 juillet 2016",
+    "id_station":"TESLA Supercharger Châteauroux",
+    "nbre_pdc":8,
+    "latitude_wgs84":"46.863047",
+    "nom_porteur":"TESLA MOTORS",
+    "coordonnees":[
+    46.863047,
+    1.716028
+    ]
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    1.716028,
+    46.863047
+    ]
+    },
+    "record_timestamp":"2016-09-20T22:44:52.978000+00:00"
+    },
+    {
+    "datasetid":"caracteristiques-et-localisation-des-stations-de-recharge-supercharger-tesla",
+    "recordid":"daec4daf515bfafa994d3d81302c82ea7ef7b766",
+    "fields":{
+    "type_charge":"rapide - Supercharger",
+    "nom_station":"TESLA Supercharger Ibis Caen Porte de Bretagne",
+    "observation":"Compatible uniquement avec les Model S Tesla",
+    "longitude_wgs84":"-0.424692",
+    "adresse_station":"1 Avenue du Fresne, 14760 Bretteville-sur-Odon",
+    "type_connecteur":"T2-T2-T2-T2-T2-T2-T2-T2",
+    "date_maj":"21 juillet 2016",
+    "id_station":"TESLA Supercharger Caen",
+    "nbre_pdc":8,
+    "latitude_wgs84":"49.164038",
+    "nom_porteur":"TESLA MOTORS",
+    "coordonnees":[
+    49.164038,
+    -0.424691999999999
+    ]
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    -0.424691999999999,
+    49.164038
+    ]
+    },
+    "record_timestamp":"2016-09-20T22:44:52.978000+00:00"
+    },
+    {
+    "datasetid":"caracteristiques-et-localisation-des-stations-de-recharge-supercharger-tesla",
+    "recordid":"01e9f40a1334878f3042c9688751f2dd71e1676d",
+    "fields":{
+    "type_charge":"rapide - Supercharger",
+    "nom_station":"TESLA Supercharger Aire de Reims - Champagne Nord",
+    "observation":"Compatible uniquement avec les Model S Tesla",
+    "longitude_wgs84":"4.245951",
+    "adresse_station":"Aire de Reims-Champagne-Nord A4, 51400 Les Petites-Loges",
+    "type_connecteur":"T2-T2-T2-T2-T2-T2",
+    "date_maj":"21 juillet 2016",
+    "id_station":"TESLA Supercharger Aire de Reims - Champagne Nord",
+    "nbre_pdc":6,
+    "latitude_wgs84":"49.11918",
+    "nom_porteur":"TESLA MOTORS",
+    "coordonnees":[
+    49.11918,
+    4.245951
+    ]
+    },
+    "geometry":{
+    "type":"Point",
+    "coordinates":[
+    4.245951,
+    49.11918
+    ]
+    },
+    "record_timestamp":"2016-09-20T22:44:52.978000+00:00"
+    }
+    ],
+    "facet_groups":[
+    {
+    
+    "name":"nom_station"
+    },
+    {
+    "facets":[
+    {
+    "count":42,
+    "path":"rapide - Supercharger",
+    "state":"displayed",
+    "name":"rapide - Supercharger"
+    }
+    ],
+    "name":"type_charge"
+    },
+    {
+    "facets":[
+    {
+    "count":42,
+    "path":"T2",
+    "state":"displayed",
+    "name":"T2"
+    }
+    ],
+    "name":"type_connecteur"
+    }
+    ]
+    }
