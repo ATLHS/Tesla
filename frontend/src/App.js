@@ -22,6 +22,9 @@ function App() {
     if(toggle){
         mobilNav = <MobileNavbar mobileNavStatut={toggle} blackNavItem={() => setNavColor("black")} whiteNavItem={() => setNavColor("white")} linkColor={navColor} enableMobileMenu={() => setToggle(!toggle)}/>
         backdrop = <Backdrop enableMobileMenu={() => setToggle(!toggle)} />
+        document.body.classList.add('position-fixed');
+    } else {
+        document.body.classList.remove('position-fixed');
     }
     return (
       <div className="container-fluid p-0 position-relative overflow-hidden">
