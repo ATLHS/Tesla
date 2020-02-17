@@ -77,8 +77,8 @@ const Home = (props) => {
             </div>
             <div className="row mt-5 mb-5">
                 <div className="col-md-8 m-auto">
-                    <h3 className="display-4 text-center">On the Road</h3>
-                    <p className="text-center text-dark">Stop at a Supercharger while you take a quick break. Long <br/> distance travel is easy with access to the world’s fastest charging <br/> network.</p>
+                    <h3 className="display-4 text-center onTheRoad">On the Road</h3>
+                    <p className="text-center text-dark w-50 m-auto">Stop at a Supercharger while you take a quick break. Long distance travel is easy with access to the world’s fastest charging network.</p>
                 </div>
             </div>
             <div className="d-flex justify-content-center">
