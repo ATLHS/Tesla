@@ -8,7 +8,7 @@ import '../../css/mobileNavbar.css';
 const MobileNavbar = (props) => {
     
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-white w-75 h-100 position-absolute" style={{zIndex: 1500, marginLeft: props.mobileNavStatut ? '25%' : '100%'}}>
+        <nav className="navbar navbar-expand-lg navbar-light bg-white shadow w-75 h-100 position-fixed" style={{zIndex: 1500, marginLeft: props.mobileNavStatut ? '25%' : '100%'}}>
             <div className="collapse navbar-collapse d-flex justify-content-left w-100 h-100 flex-column">
                 <ul className="navbar-nav w-100 h-75 h-75 d-flex justify-content-between">
                     <li className="nav-item d-flex justify-content-between align-items-center">
