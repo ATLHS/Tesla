@@ -22,7 +22,7 @@ const Home = (props) => {
     const imgSpring = useSpring({
         config: config.molasses,
         from: { transform: `scale(1) translateX(0%)`, transformOrigin: `50% ${transformOriginY}%`},
-        to: {transform: `scale(${scale}) translateX(${translateX}%)`},
+        to: {transform: `scale(${window.innerWidth > props.breakpoint ? 2 : 3}) translateX(${translateX}%)`},
         delay: delay,
         onRest: () => setDelay(0)
     });

@@ -5,6 +5,7 @@ const bodyParser= require('body-parser');
 const mongoose = require('mongoose');
 const port = process.env.PORT || 5000;
 const uri = process.env.MONGODB_URI;
+const path = require('path');
 const emailRouter = require('./routes/email');
 
 // Mongoose connection
