@@ -12,6 +12,8 @@ const Home = (props) => {
     const modelNames = ["Model S", "Model 3", "Model X"];
     const [n, setN] = useState(1);
     let img = window.innerWidth > props.breakpoint ? homeDesktop : homeMobile;
+    let scale = window.innerWidth > props.breakpoint ? 2 : 3;
+    let transformO = window.innerWidth > props.breakpoint ? 65 : 58;
    
     useEffect(() => {
         window.innerWidth > props.breakpoint ? setX(25) : setX(33);
@@ -19,8 +21,8 @@ const Home = (props) => {
 
     const imgSpring = useSpring({
         config: config.molasses,
-        from: { transform: `scale(1) translateX(0%)`, transformOrigin: "50% 60%"},
-        to: {transform: window.innerWidth > props.breakpoint ? `scale(2) translateX(${translateX}%)` : `scale(3) translateX(${translateX}%)`},
+        from: { transform: `scale(1) translateX(0%)`, transformOrigin: `50% ${transformO}%`},
+        to: {transform: `scale(${scale}) translateX(${translateX}%)`},
         delay: delay
     });
 
