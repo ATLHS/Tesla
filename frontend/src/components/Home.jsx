@@ -56,7 +56,7 @@ const Home = (props) => {
     }
     return (
     <ReactFullpage
-    scrollingSpeed = {500}
+    scrollingSpeed = {1000}
     render={({ state, fullpageApi }) => {
         return (
         <ReactFullpage.Wrapper>
