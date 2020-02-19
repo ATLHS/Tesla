@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {useSpring, animated} from 'react-spring';
+import {useSpring, animated, config} from 'react-spring';
 import '../css/home.css';
 import homeDesktop from '../images/homeDesktop.jpg';
 import homeMobile from '../images/homeMobile.jpg';
@@ -7,37 +7,38 @@ import Map from './Map';
 
 const Home = (props) => {
     const [translateX, setTranslateX] = useState(0);
-    const [x, setX] = useState(null);
-    const [modelTitle, setModelTitle] = useState('Model 3');
-    const [delay, setDelay] = useState(1000);
-    const [ModelQuotes, setModelQuotes] = useState('');
-
+    const [x, setX] = useState(0);
+    const [delay, setDelay] = useState(1500);
+    const modelNames = ["Model S", "Model 3", "Model X"];
+    const [n, setN] = useState(1);
+    let img = window.innerWidth > props.breakpoint ? homeDesktop : homeMobile;
+    let transformOriginY = window.innerWidth > props.breakpoint ? 65 : 60;
+    let scale = window.innerWidth > props.breakpoint ? 2 : 3;
+   
     useEffect(() => {
         window.innerWidth > props.breakpoint ? setX(25) : setX(33);
     }, [x])
 
     const imgSpring = useSpring({
-        config: {duration: 500},
-        from: {marginTop: '-10%', transform: 'scale(1) translateX(0%)', transformOrigin: '50% 60%'},
-        to: {transform: window.innerWidth > props.breakpoint ? `scale(2) translateX(${translateX}%)` : `scale(3.1) translateX(${translateX}%)`},
-        delay: delay
+        config: config.molasses,
+        from: { transform: `scale(1) translateX(0%)`, transformOrigin: `50% ${transformOriginY}%`},
+        to: {transform: `scale(${scale}) translateX(${translateX}%)`},
+        delay: delay,
+        onRest: () => setDelay(0)
     });
-    const CarouselCaptionSpring = useSpring({config: {duration: 1000},from: {opacity: 0},to: {opacity: 1}, delay: 1000});
 
+    const CarouselCaptionSpring = useSpring({config: {duration: 1000},from: {opacity: 0},to: {opacity: 1}, delay: 1500});
+   
     const translate = (e) => {
         const id = e.target.id;
         switch (id) {
             case "prev":
-                setDelay(0);
                 translateX === -x ? setTranslateX(0) : setTranslateX(x);
-                translateX === -x ? setModelTitle('Model 3') : setModelTitle('Model S');
-                translateX === -x ? setModelQuotes('') : setModelQuotes('Free Unlimited Supercharging.');
+                translateX === -x ? setN(1) : setN(0);
                 break;
             case "next":
-                setDelay(0);
                 translateX === x ? setTranslateX(0) : setTranslateX(-x);
-                translateX === x ? setModelTitle('Model 3') : setModelTitle('Model X');
-                translateX === x ? setModelQuotes('') : setModelQuotes('Free Unlimited Supercharging.');
+                translateX === x ? setN(1) : setN(2);
                 break;
             default:
                 setTranslateX(0);
@@ -46,7 +47,7 @@ const Home = (props) => {
     }
     return (
         <div>
-            <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
+            <div className="carousel slide" data-ride="carousel">
                 <ol className="carousel-indicators">
                     <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>
                 </ol>
@@ -57,35 +58,27 @@ const Home = (props) => {
                         <a className="d-block text-white visit-store" href="#">Visit a store</a>
                     </animated.div>
                 </div>
-                <div className="carousel-inner" style={{height: window.innerHeight }}>
-                    <div className="carousel-item active" >
-                        <animated.img style={imgSpring} src={window.innerWidth > props.breakpoint ? homeDesktop : homeMobile } className="w-100 h-100" alt="models" />
-                        <div className="carousel-caption d-md-block">
-                            <animated.h2 style={CarouselCaptionSpring} className="modelsName">{modelTitle}</animated.h2> 
-                            <animated.p style={CarouselCaptionSpring} className="modelsQuotes">{ModelQuotes}</animated.p>
-                        </div>
+                <div className="carousel-inner" >
+                    <div className="carousel-item active" style={{height: window.innerHeight, width: window.innerWidth }}>
+                    <animated.img className="models" style={imgSpring} src={img} alt="models" />
+                    <div className="carousel-caption d-md-block">
+                        <animated.h5 className="modelsName" style={CarouselCaptionSpring}>{modelNames[n]}</animated.h5>
+                        <animated.p className="modelsQuotes" style={CarouselCaptionSpring}>{translateX !== 0 && 'Free Unlimited Supercharging.'}</animated.p>
+                    </div>
                     </div>
                 </div>
-                <a id="prev" className="carousel-control-prev h-25 mt-auto mb-auto" href="#carouselExampleCaptions" role="button" data-slide="prev" onClick={translate}>
+                <a className="carousel-control-prev mt-auto mb-auto h-25" role="button" id="prev" onClick={translate}>
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span className="sr-only">Previous</span>
                 </a>
-                <a id="next" className="carousel-control-next h-25 mt-auto mb-auto" href="#carouselExampleCaptions" role="button" data-slide="next" onClick={translate}>
+                <a className="carousel-control-next mt-auto mb-auto h-25"  role="button" id="next" onClick={translate}>
                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
                     <span className="sr-only">Next</span>
                 </a>
             </div>
-            <div className="row mt-5 mb-5">
-                <div className="col-md-8 m-auto">
-                    <h3 className="display-4 text-center onTheRoad">On the Road</h3>
-                    <p className="text-center text-dark w-50 m-auto">Stop at a Supercharger while you take a quick break. Long distance travel is easy with access to the world’s fastest charging network.</p>
-                </div>
-            </div>
-            <div className="d-flex justify-content-center">
-                <Map />
-            </div>
         </div>
     );
+
 }
 
 export default Home;

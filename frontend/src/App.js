@@ -27,8 +27,8 @@ function App() {
         document.body.classList.remove('position-fixed');
     }
     return (
-      <div className="container-fluid p-0 position-relative overflow-hidden">
-      <Router>
+      <div className="">
+      <Router> 
         <DesktopNavbar breakpoint={750} blackNavItem={() => setNavColor("black")} whiteNavItem={() => setNavColor("white")} linkColor={navColor} enableMobileMenu={() => setToggle(!toggle)} />
         {mobilNav}
         {backdrop}
@@ -58,7 +58,7 @@ function App() {
               <Contact breakpoint={750} />
           </Route>
           <Route path="/">
-              <Home breakpoint={750} />
+              <Home breakpoint={750}/>
           </Route>
         </Switch>
       </Router>  

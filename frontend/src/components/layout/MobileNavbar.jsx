@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import {useSpring, animated} from 'react-spring';
-import Logo from "./Logo";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import '../../css/mobileNavbar.css';
