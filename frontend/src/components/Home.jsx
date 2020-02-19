@@ -12,7 +12,6 @@ const Home = (props) => {
     const modelNames = ["Model S", "Model 3", "Model X"];
     const [n, setN] = useState(1);
     let img = window.innerWidth > props.breakpoint ? homeDesktop : homeMobile;
-    let transformOriginY = window.innerWidth > props.breakpoint ? 65 : 60;
     let scale = window.innerWidth > props.breakpoint ? 2 : 3;
    
     useEffect(() => {
@@ -21,10 +20,9 @@ const Home = (props) => {
 
     const imgSpring = useSpring({
         config: config.molasses,
-        from: { transform: `scale(1) translateX(0%)`, transformOrigin: `50% ${transformOriginY}%`},
-        to: {transform: `scale(${window.innerWidth > props.breakpoint ? 2 : 3}) translateX(${translateX}%)`},
-        delay: delay,
-        onRest: () => setDelay(0)
+        from: { transform: `scale(1) translateX(0%)`, transformOrigin: "50% 60%"},
+        to: {transform: `scale(${scale}) translateX(${translateX}%)`},
+        delay: delay
     });
 
     const CarouselCaptionSpring = useSpring({config: {duration: 1000},from: {opacity: 0},to: {opacity: 1}, delay: 1500});
@@ -33,10 +31,12 @@ const Home = (props) => {
         const id = e.target.id;
         switch (id) {
             case "prev":
+                setDelay(0)
                 translateX === -x ? setTranslateX(0) : setTranslateX(x);
                 translateX === -x ? setN(1) : setN(0);
                 break;
             case "next":
+                setDelay(0)
                 translateX === x ? setTranslateX(0) : setTranslateX(-x);
                 translateX === x ? setN(1) : setN(2);
                 break;
