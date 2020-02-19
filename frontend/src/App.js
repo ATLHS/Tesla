@@ -26,6 +26,7 @@ function App() {
     } else {
         document.body.classList.remove('position-fixed');
     }
+    
     return (
       <div className="">
       <Router> 

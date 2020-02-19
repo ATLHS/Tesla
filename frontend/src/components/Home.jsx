@@ -1,8 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import {useSpring, animated, config} from 'react-spring';
+import ReactFullpage from '@fullpage/react-fullpage';
 import '../css/home.css';
 import homeDesktop from '../images/homeDesktop.jpg';
 import homeMobile from '../images/homeMobile.jpg';
+import energyDesktop from '../images/energyDesktop.jpg';
+import energyMobile from '../images/energyMobile.jpg';
+import accessoriesHeroDesktop from '../videos/accessoriesHeroDesktop.mp4';
+import accessoriesHeroMobile from '../videos/accessoriesHeroMobile.mp4';
+import Video from './layout/Video';
 import Map from './Map';
 
 const Home = (props) => {
@@ -12,6 +18,8 @@ const Home = (props) => {
     const modelNames = ["Model S", "Model 3", "Model X"];
     const [n, setN] = useState(1);
     let img = window.innerWidth > props.breakpoint ? homeDesktop : homeMobile;
+    let img2 = window.innerWidth > props.breakpoint ? energyDesktop : energyMobile;
+    let mp4 = window.innerWidth > props.breakpoint ? accessoriesHeroDesktop : accessoriesHeroMobile;
     let scale = window.innerWidth > props.breakpoint ? 2 : 3;
     let transformO = window.innerWidth > props.breakpoint ? 65 : 58;
    
@@ -47,38 +55,55 @@ const Home = (props) => {
         }
     }
     return (
-        <div>
-            <div className="carousel slide" data-ride="carousel">
-                <ol className="carousel-indicators">
-                    <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>
-                </ol>
-                <div className="row position-absolute w-100 m-auto btn-row">
-                    <animated.div style={CarouselCaptionSpring} className="col-md-12 p-0 text-center">
-                        <button type="button" className="btn btn-light border-light btn-sm m-2 rounded-pill cta">CUSTOM ORDER</button>
-                        <button type="button" className="btn btn-outline-light m-2 btn-sm rounded-pill cta">EXISTING INVENTORY</button>
-                        <a className="d-block text-white visit-store" href="#">Visit a store</a>
-                    </animated.div>
-                </div>
-                <div className="carousel-inner" >
-                    <div className="carousel-item active" style={{height: window.innerHeight, width: window.innerWidth }}>
-                    <animated.img className="models" style={imgSpring} src={img} alt="models" />
-                    <div className="carousel-caption d-md-block">
-                        <animated.h5 className="modelsName" style={CarouselCaptionSpring}>{modelNames[n]}</animated.h5>
-                        <animated.p className="modelsQuotes" style={CarouselCaptionSpring}>{translateX !== 0 && 'Free Unlimited Supercharging.'}</animated.p>
+    <ReactFullpage
+    scrollingSpeed = {500}
+    render={({ state, fullpageApi }) => {
+        return (
+        <ReactFullpage.Wrapper>
+            <div>
+                <div className="carousel slide section" data-ride="carousel">
+                    <ol className="carousel-indicators">
+                        <li data-target="#carouselExampleCaptions" data-slide-to="0" className="active"></li>
+                    </ol>
+                    <div className="row position-absolute w-100 m-auto btn-row">
+                        <animated.div style={CarouselCaptionSpring} className="col-md-12 p-0 text-center">
+                            <button type="button" className="btn btn-light border-light btn-sm m-2 rounded-pill cta">CUSTOM ORDER</button>
+                            <button type="button" className="btn btn-outline-light m-2 btn-sm rounded-pill cta">EXISTING INVENTORY</button>
+                            <a className="d-block text-white visit-store" href="#">Visit a store</a>
+                        </animated.div>
                     </div>
+                    <div className="carousel-inner" >
+                        <div className="carousel-item active" style={{height: window.innerHeight, width: window.innerWidth }}>
+                        <animated.img className="models" style={imgSpring} src={img} alt="models" />
+                        <div className="carousel-caption d-md-block">
+                            <animated.h5 className="modelsName" style={CarouselCaptionSpring}>{modelNames[n]}</animated.h5>
+                            <animated.p className="modelsQuotes" style={CarouselCaptionSpring}>{translateX !== 0 && 'Free Unlimited Supercharging.'}</animated.p>
+                        </div>
+                        </div>
                     </div>
+                    <a className="carousel-control-prev mt-auto mb-auto h-25" role="button" id="prev" onClick={translate}>
+                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span className="sr-only">Previous</span>
+                    </a>
+                    <a className="carousel-control-next mt-auto mb-auto h-25"  role="button" id="next" onClick={translate}>
+                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span className="sr-only">Next</span>
+                    </a>
                 </div>
-                <a className="carousel-control-prev mt-auto mb-auto h-25" role="button" id="prev" onClick={translate}>
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Previous</span>
-                </a>
-                <a className="carousel-control-next mt-auto mb-auto h-25"  role="button" id="next" onClick={translate}>
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Next</span>
-                </a>
+                <div className="section">
+                    <img className="models" src={img2} alt="energy" />
+                </div>
+                <div className="section">
+                    <Video className="models" src={mp4} alt="accessories-hero" />
+                </div>
             </div>
-        </div>
+        </ReactFullpage.Wrapper>
+        );
+    }}
+    />
     );
+
+
 
 }
 
