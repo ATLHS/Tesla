@@ -11,7 +11,7 @@ import accessoriesHeroMobile from '../videos/accessoriesHeroMobile.mp4';
 import Video from './layout/Video';
 import Map from './Map';
 
-const Home = (props) => {
+const Home = (props) => { 
     const [translateX, setTranslateX] = useState(0);
     const [x, setX] = useState(0);
     const [delay, setDelay] = useState(1500);
