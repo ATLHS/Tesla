@@ -20,7 +20,7 @@ const ModelX = (props) => {
         return (
             <div className="row m-0" style={{height: window.innerHeight }}>
                 <div className="col-md-12 h-100 p-0" >
-                <video className="w-100 h-100 models" autoPlay playsinline>
+                <video className="w-100 h-100 models" autoPlay playsinline muted>
                     <Video src={window.innerWidth > props.breakpoint ? modelXDesktop : modelXMobile } alt="modelX"/>
                 </video>
                 </div>
