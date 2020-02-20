@@ -17,6 +17,10 @@
     font-weight: bold;
     margin-top: -2%;
 }
+.section2
+{
+    margin-top: 6% !important;
+}
 .btn-row
 {
     z-index: 1000;
@@ -43,7 +47,11 @@
         font-size: 30px;
         margin-top: -12%;
     }
-    .onTheRoad
+    .section2
+    {
+        margin-top: 25% !important;
+    }
+        .onTheRoad
     {
         font-size: 40px;
     }
