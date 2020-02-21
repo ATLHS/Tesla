@@ -104,7 +104,7 @@ const Home = (props) => {
                         </div>
                         <div className="row position-absolute w-100 m-auto btn-row pt-2">
                             <div className="col-md-12 text-center">
-                                <button type="button" className="btn btn-light btn-sm m-2 rounded-pill cta">SHOP NOW</button>
+                                <button type="button" className="btn btn-light border-light btn-sm m-2 rounded-pill cta">SHOP NOW</button>
                             </div>
                         </div>
                     </div>
