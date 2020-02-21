@@ -28,7 +28,7 @@ function App() {
     }
     
     return (
-      <div className="">
+      <div className="container-fluid p-0">
       <Router> 
         <DesktopNavbar breakpoint={750} blackNavItem={() => setNavColor("black")} whiteNavItem={() => setNavColor("white")} linkColor={navColor} enableMobileMenu={() => setToggle(!toggle)} />
         {mobilNav}
