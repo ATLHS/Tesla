@@ -16,7 +16,7 @@ import '../css/home.css';
 
 const MapSidebar = (props) => {
     return (
-        <div className="alert alert-light mt-3 sidebar" role="alert">
+        <div className="alert alert-light m-0 sidebar" role="alert">
             <div className="d-flex justify-content-between align-items-center">
                 <div className="d-flex justify-content-left align-items-center">
                     <FontAwesomeIcon className="text-dark" style={{fontSize:"20px"}} icon={faMapMarker} size="sm" />
@@ -26,11 +26,10 @@ const MapSidebar = (props) => {
             </div>
             <hr className="text-light w-100 mapSidebarHr"/>
             <p className="display-4 text-dark text-left map-heading text-left">{props.n_station}</p>
-            <p className="mb-0 text-dark text-left">{props.ad_station}</p>
-            <p className="mb-0 text-dark text-left">{props.nbre_pdc}</p>
-            <p className="mb-2 text-dark text-left">{props.accessibilite}</p>
-            <p className="mb-2 text-dark text-left">{props.observations}</p>
-            <p>France</p>
+            <p className="mb-0 text-left">{props.ad_station}</p>
+            <p className="mb-2 text-left">{props.accessibilite}</p>
+            <p className="mb-2 text-left">{props.observations}</p>
+            <p className="mb-2 text-dark text-left">France</p>
         </div>
     );
 }
@@ -136,10 +135,10 @@ const Home = (props) => {
                     </div>
                     <div className="section homeSection4">
                         <Map items={superchargers} widthVw="100vw" heightVh="100vh" log={(data) => (setMapData(data), setDisplayMapSidebar(true))}/>
-                        <div className="position-absolute w-25 btn-map">
-                            <div className="col-md-12 text-md-left text-center sideBarContainer">
+                        <div className={`row position-absolute ${window.innerWidth > props.breakpoint &&  "w-25"} btn-map`}>
+                            <div className="col-sm-12 text-center sideBarContainer">
                                 {/* <button type="button" className="btn btn-light border-light btn-sm m-0 rounded-pill cta w-100">SHOP NOW</button> */}
-                                { displayMapSidebar &&  <MapSidebar onClick={() => setDisplayMapSidebar(false)} {...mapData}/>}
+                                { displayMapSidebar &&  <MapSidebar className="map" onClick={() => setDisplayMapSidebar(false)} {...mapData}/>}
                             </div>
                         </div>
                     </div>
