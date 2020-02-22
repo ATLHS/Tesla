@@ -8,7 +8,7 @@ const Cybertruck = (props) => {
     return (
         <div className="row m-0" style={{height: window.innerHeight }}>
             <div className="col-md-12 h-100 p-0" >
-                <img className="w-100 h-100 models" src={window.innerWidth > props.breakpoint ? cybertruckDesktop : cybertruckMobile } alt="cybertruck"/>
+                <img className="w-100 h-100 mediaSection-1" src={window.innerWidth > props.breakpoint ? cybertruckDesktop : cybertruckMobile } alt="cybertruck"/>
             </div>
             <div className="row w-100 position-absolute m-auto infoContainer">
                 <div className="col-md-12 text-center">

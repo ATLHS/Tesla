@@ -9,7 +9,31 @@ import AccessoriesDesktop from '../videos/AccessoriesDesktop.mp4';
 import AccessoriesMobile from '../videos/AccessoriesMobile.mp4';
 import Video from './layout/Video';
 import Map from './Map';
+import superchargers from '../data/superchargers-location.json';
+import { FontAwesomeIcon  } from '@fortawesome/react-fontawesome';
+import {faMapMarker, faTimes} from '@fortawesome/free-solid-svg-icons';
 import '../css/home.css';
+
+const MapSidebar = (props) => {
+    return (
+        <div className="alert alert-light mt-3 sidebar" role="alert">
+            <div className="d-flex justify-content-between align-items-center">
+                <div className="d-flex justify-content-left align-items-center">
+                    <FontAwesomeIcon className="text-dark" style={{fontSize:"20px"}} icon={faMapMarker} size="sm" />
+                    <h5 className="alert-heading mb-0 ml-3">{props.n_enseigne}</h5>
+                </div>
+                <FontAwesomeIcon onClick={props.onClick} className="text-dark" style={{fontSize:"20px", height: "20px", width: "20px"}} icon={faTimes} size="sm" />
+            </div>
+            <hr className="text-light w-100 mapSidebarHr"/>
+            <p className="display-4 text-dark text-left map-heading text-left">{props.n_station}</p>
+            <p className="mb-0 text-dark text-left">{props.ad_station}</p>
+            <p className="mb-0 text-dark text-left">{props.nbre_pdc}</p>
+            <p className="mb-2 text-dark text-left">{props.accessibilite}</p>
+            <p className="mb-2 text-dark text-left">{props.observations}</p>
+            <p>France</p>
+        </div>
+    );
+}
 
 const Home = (props) => { 
     const [translateX, setTranslateX] = useState(0);
@@ -17,6 +41,8 @@ const Home = (props) => {
     const [delay, setDelay] = useState(1500);
     const modelNames = ["Model S", "Model 3", "Model X"];
     const [i, setI] = useState(1);
+    const [mapData, setMapData] = useState();
+    const [displayMapSidebar, setDisplayMapSidebar] = useState(false);
     
     const mediaSection_1 = window.innerWidth > props.breakpoint ? homeDesktop : homeMobile;
     const mediaSection_2 = window.innerWidth > props.breakpoint ? energyDesktop : energyMobile;
@@ -26,8 +52,8 @@ const Home = (props) => {
     let transformO = window.innerWidth > props.breakpoint ? 65 : 58;
    
     useEffect(() => {
-        window.innerWidth > props.breakpoint ? setX(25) : setX(33);  
-    },[x])
+        window.innerWidth > props.breakpoint ? setX(25) : setX(33);
+    },[props.breakpoint])
 
     // React-spring animation
     const imgSpring = useSpring({
@@ -36,9 +62,8 @@ const Home = (props) => {
         to: {transform: `scale(${scale}) translateX(${translateX}%)`},
         delay: delay
     });
-    const CarouselCaptionSpring = useSpring({config: {duration: 1000},from: {opacity: 0},to: {opacity: 1}, delay: 1500});
+    // const CarouselCaptionSpring = useSpring({config: {duration: 1000},from: {opacity: 0},to: {opacity: 1}});
    
-
     const translate = (e) => {
         const id = e.target.id;
         switch (id) {
@@ -57,6 +82,7 @@ const Home = (props) => {
                 break;
         }
     }
+    
     return ( 
         <ReactFullpage
         scrollingSpeed = {1000}
@@ -75,11 +101,11 @@ const Home = (props) => {
                             <div className="col-md-12 text-center">
                                 <button type="button" className="btn btn-light border-light btn-sm m-2 rounded-pill cta">CUSTOM ORDER</button>
                                 <button type="button" className="btn btn-outline-light btn-sm m-2 rounded-pill cta">EXISTING INVENTORY</button>
-                                <a className="d-block text-white visit-store" href="#">Visit a store</a>
+                                <span className="d-block text-white visit-store">Visit a store</span>
                             </div>
                         </div>
-                        <a className="carousel-control-prev mt-auto mb-auto h-50" role="button" id="prev" onClick={translate}></a>
-                        <a className="carousel-control-next mt-auto mb-auto h-50"  role="button" id="next" onClick={translate}></a>
+                        <span className="carousel-control-prev mt-auto mb-auto h-50" role="button" id="prev" onClick={translate}></span>
+                        <span className="carousel-control-next mt-auto mb-auto h-50"  role="button" id="next" onClick={translate}></span>
                    </div>
                    <div className="section homeSection2">
                         <img className="h-100 w-100 mediaSection-2" src={mediaSection_2} alt="Energy"/>
@@ -91,7 +117,7 @@ const Home = (props) => {
                             <div className="col-md-12 text-center">
                                 <button type="button" className="btn btn-outline-light btn-sm m-2 rounded-pill cta">ORDER SOLAR PANELS</button>
                                 <button type="button" className="btn btn-outline-light btn-sm m-2 rounded-pill cta">ORDER SOLAR ROOF</button>
-                                <a className="d-block text-white visit-store" href="#">Learn more</a>
+                                <span className="d-block text-white visit-store">Learn more</span>
                             </div>
                         </div>
                    </div>
@@ -108,6 +134,15 @@ const Home = (props) => {
                             </div>
                         </div>
                     </div>
+                    <div className="section homeSection4">
+                        <Map items={superchargers} widthVw="100vw" heightVh="100vh" log={(data) => (setMapData(data), setDisplayMapSidebar(true))}/>
+                        <div className="position-absolute w-25 btn-map">
+                            <div className="col-md-12 text-md-left text-center sideBarContainer">
+                                {/* <button type="button" className="btn btn-light border-light btn-sm m-0 rounded-pill cta w-100">SHOP NOW</button> */}
+                                { displayMapSidebar &&  <MapSidebar onClick={() => setDisplayMapSidebar(false)} {...mapData}/>}
+                            </div>
+                        </div>
+                    </div>
                 </>
             </ReactFullpage.Wrapper>
         );
@@ -115,5 +150,6 @@ const Home = (props) => {
     />
     );
 }
+
 
 export default Home; 

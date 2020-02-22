@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-.mediaSection-1, .mediaSection-2, .mediaSection-3
+.mediaSection-1, .mediaSection-2, .mediaSection-3, .mediaSection-4
 {
     object-fit: cover;
 }
@@ -28,17 +28,34 @@ a > span
     z-index: 1000;
     top: 25%;
 }
+.btn-map
+{
+    top: 10%;
+}
 .modelsQuotes
 {
     font-size: 22px;
     font-weight: lighter;
     display: none;
 }
+.map-heading
+{
+    font-size: 25px;
+}
+.mapSidebarHr
+{
+    height: 1px !important;
+    border-top: 1px solid black;
+}
 .cta
 {
     width: 19%;
     border: solid 3px;
     padding: 8px;
+}
+.sidebar
+{
+    border-radius: 10px !important;
 }
 .visit-store
 {
@@ -73,6 +90,22 @@ a > span
     {
         display: block;
         font-size: 17px;
+    }
+    .btn-map
+    {
+        top: initial;
+        bottom: 0 !important;
+        width: 100% !important;
+    }
+    .sidebar
+    {
+        border-radius: 0px !important;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    .sideBarContainer
+    {
+        padding: 0 !important;
     }
     
 }
