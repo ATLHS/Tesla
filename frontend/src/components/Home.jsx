@@ -86,6 +86,7 @@ const Home = (props) => {
         <ReactFullpage
         scrollingSpeed = {1000}
         navigation
+        normalScrollElements = {".homeSection4"}
         render={() => {
         return (
             <ReactFullpage.Wrapper>
@@ -121,13 +122,15 @@ const Home = (props) => {
                         </div>
                    </div>
                    <div className="section homeSection3">
-                       <video className="h-100 w-100 mediaSection-3" loop data-autoplay muted playsInline>
+                       <div className="h-100 w-100 mediaSection-3">
+                       <video className="h-100 w-100" loop data-autoplay muted playsInline>
                            <Video src={mediaSection_3} alt="Accessories-video" />
                         </video>
+                       </div>
                         <div className="carousel-caption d-md-block">
                             <h5 className="modelsName">Tesla Accessories</h5>
                         </div>
-                        <div className="row position-absolute w-100 m-auto btn-row pt-2">
+                        <div className="row position-absolute w-100 m-auto btn-row pt-1">
                             <div className="col-md-12 text-center">
                                 <button type="button" className="btn btn-light border-light btn-sm m-2 rounded-pill cta">SHOP NOW</button>
                             </div>
@@ -135,11 +138,13 @@ const Home = (props) => {
                     </div>
                     <div className="section homeSection4">
                         <Map items={superchargers} widthVw="100vw" heightVh="100vh" log={(data) => (setMapData(data), setDisplayMapSidebar(true))}/>
+                        <div className="position-relative ">
                         <div className={`row position-absolute ${window.innerWidth > props.breakpoint &&  "w-25"} btn-map`}>
                             <div className="col-sm-12 text-center sideBarContainer">
                                 {/* <button type="button" className="btn btn-light border-light btn-sm m-0 rounded-pill cta w-100">SHOP NOW</button> */}
                                 { displayMapSidebar &&  <MapSidebar className="map" onClick={() => setDisplayMapSidebar(false)} {...mapData}/>}
                             </div>
+                        </div>
                         </div>
                     </div>
                 </>
