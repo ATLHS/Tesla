@@ -59,8 +59,8 @@ a > span
 }
 .mapSidebarContainer
 {
-    top: 50%;
-    transform: translateY(-80%);
+    top: 30%;
+    transform: translateY(-50%);
 }
 .visit-store
 {
@@ -103,10 +103,9 @@ a > span
     }
     .mapSidebarContainer
     {
-       bottom: 0;
-       top: unset;
-       transform: unset;
-       padding: 5px;
+        top: unset;
+        transform: unset;
+        bottom: 0;
     }
     
 }

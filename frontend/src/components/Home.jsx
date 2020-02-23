@@ -141,7 +141,7 @@ const Home = (props) => {
                     </div>
                     {/* Section 4 */}
                     <div className="section">
-                        <div className="row m-0 position-relative">
+                        <div className="row m-0 position-relative h-100">
                             <Map items={superchargers} widthVw="100vw" heightVh="100vh" sendItem={(item) => (setMapData(item), setDisplayMapSidebar(true))}/>
                             <div className="col-12 col-md-3 position-absolute mapSidebarContainer">
                                 <MapSidebar onClick={() => setDisplayMapSidebar(false)} {...mapData}/>
