@@ -55,7 +55,12 @@ a > span
 }
 .sidebar
 {
-    border-radius: 10px !important;
+    border-radius: 5px !important;
+}
+.mapSidebarContainer
+{
+    top: 50%;
+    transform: translateY(-80%);
 }
 .visit-store
 {
@@ -96,13 +101,12 @@ a > span
         top: initial;
         bottom: 0;
     }
-    .sidebar
+    .mapSidebarContainer
     {
-        padding: 0.70rem 1.90rem !important;
-    }
-    .sideBarContainer
-    {
-        padding: 0 !important;
+       bottom: 0;
+       top: unset;
+       transform: unset;
+       padding: 5px;
     }
     
 }

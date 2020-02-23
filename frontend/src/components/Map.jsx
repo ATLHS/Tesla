@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import MapGL, {Marker} from 'react-map-gl';
+import '../css/map.css';
 
 const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_TOKEN;
 
@@ -27,7 +28,7 @@ const Map = (props) => {
                 latitude={item.Ylatitude}
             >
                 
-                    <div style={{height: '20px', width: '20px', cursor: "pointer"}} onClick={() => props.log(item)}>
+                    <div className="marker" onClick={() => props.sendItem(item)}>
                         <i>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <circle cx="12" cy="12" r="12" fill="#c00"/>

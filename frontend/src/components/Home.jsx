@@ -41,7 +41,7 @@ const Home = (props) => {
     const modelNames = ["Model S", "Model 3", "Model X"];
     const [i, setI] = useState(1);
     const [mapData, setMapData] = useState();
-    const [displayMapSidebar, setDisplayMapSidebar] = useState(false);
+    const [displayMapSidebar, setDisplayMapSidebar] = useState(true);
     
     const mediaSection_1 = window.innerWidth > props.breakpoint ? homeDesktop : homeMobile;
     const mediaSection_2 = window.innerWidth > props.breakpoint ? energyDesktop : energyMobile;
@@ -86,11 +86,12 @@ const Home = (props) => {
         <ReactFullpage
         scrollingSpeed = {1000}
         navigation
-        normalScrollElements = {".homeSection4"}
+        // normalScrollElements = {".homeSection4"}
         render={() => {
         return (
             <ReactFullpage.Wrapper>
                 <>
+                   {/* Section 1 */}
                    <div className="section homeSection1">
                         <animated.img className="h-100 w-100 mediaSection-1" style={imgSpring} src={mediaSection_1} alt="Tesla-models"/>
                         <div className="carousel-caption d-md-block">
@@ -107,6 +108,7 @@ const Home = (props) => {
                         <span className="carousel-control-prev mt-auto mb-auto h-50" role="button" id="prev" onClick={translate}></span>
                         <span className="carousel-control-next mt-auto mb-auto h-50"  role="button" id="next" onClick={translate}></span>
                    </div>
+                   {/* Section 2 */}
                    <div className="section homeSection2">
                         <img className="h-100 w-100 mediaSection-2" src={mediaSection_2} alt="Energy"/>
                         <div className="carousel-caption d-md-block">
@@ -121,6 +123,7 @@ const Home = (props) => {
                             </div>
                         </div>
                    </div>
+                   {/* Section 3 */}
                    <div className="section homeSection3">
                        <div className="h-100 w-100 mediaSection-3">
                        <video className="h-100 w-100" loop data-autoplay muted playsInline>
@@ -136,15 +139,13 @@ const Home = (props) => {
                             </div>
                         </div>
                     </div>
-                    <div className="section homeSection4">
-                        <Map items={superchargers} widthVw="100vw" heightVh="100vh" log={(data) => (setMapData(data), setDisplayMapSidebar(true))}/>
-                        <div className="position-relative ">
-                        <div className={`row position-absolute ${window.innerWidth > props.breakpoint &&  "w-25"} btn-map`}>
-                            <div className="col-sm-12 text-center sideBarContainer">
-                                {/* <button type="button" className="btn btn-light border-light btn-sm m-0 rounded-pill cta w-100">SHOP NOW</button> */}
-                                { displayMapSidebar &&  <MapSidebar className="map" onClick={() => setDisplayMapSidebar(false)} {...mapData}/>}
+                    {/* Section 4 */}
+                    <div className="section">
+                        <div className="row m-0 position-relative">
+                            <Map items={superchargers} widthVw="100vw" heightVh="100vh" sendItem={(item) => (setMapData(item), setDisplayMapSidebar(true))}/>
+                            <div className="col-12 col-md-3 position-absolute mapSidebarContainer">
+                                <MapSidebar onClick={() => setDisplayMapSidebar(false)} {...mapData}/>
                             </div>
-                        </div>
                         </div>
                     </div>
                 </>
