@@ -62,7 +62,7 @@ const Home = (props) => {
         to: {transform: `scale(${scale}) translateX(${translateX}%)`},
         delay: delay
     });
-    // const CarouselCaptionSpring = useSpring({config: {duration: 1000},from: {opacity: 0},to: {opacity: 1}});
+    const CarouselCaptionSpring = useSpring({config: {duration: 1000},from: {bottom: 'unset'},to: {bottom: 0}});
    
     const translate = (e) => {
         const id = e.target.id;
@@ -87,7 +87,9 @@ const Home = (props) => {
         <ReactFullpage
         scrollingSpeed = {1000}
         navigation
-        // normalScrollElements = {".homeSection4"}
+        normalScrollElements = {".homeSection4"}
+        // dragAndMove = {true}
+        touchSensitivity = {10}
         render={() => {
         return (
             <ReactFullpage.Wrapper>
@@ -141,13 +143,11 @@ const Home = (props) => {
                         </div>
                     </div>
                     {/* Section 4 */}
-                    <div className="section">
-                        
-                            <Map items={superchargers} widthVw="100vw" heightVh="100vh" sendItem={(item) => (setMapData(item), setDisplayMapSidebar(true))}/>
-                            <div className="col-12 col-md-3 position-absolute mapSidebarContainer">
-                                {displayMapSidebar && <MapSidebar onClick={() => setDisplayMapSidebar(false)} {...mapData}/>}
-                            </div>
-                        
+                    <div className="section homeSection4">
+                        <Map items={superchargers} widthVw="100vw" heightVh="100vh" sendItem={(item) => (setMapData(item), setDisplayMapSidebar(true))}/>
+                        <div className="col-12 col-md-3 position-absolute mapSidebarContainer">
+                            {displayMapSidebar && <MapSidebar onClick={() => setDisplayMapSidebar(false)} {...mapData}/>}
+                        </div>
                     </div>
                 </>
             </ReactFullpage.Wrapper>
