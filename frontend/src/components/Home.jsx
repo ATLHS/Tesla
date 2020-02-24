@@ -13,6 +13,7 @@ import superchargers from '../data/superchargers-location.json';
 import { FontAwesomeIcon  } from '@fortawesome/react-fontawesome';
 import {faMapMarker, faTimes} from '@fortawesome/free-solid-svg-icons';
 import '../css/home.css';
+import MobileNavbar from './layout/MobileNavbar';
 
 const MapSidebar = (props) => {
     return (
@@ -41,7 +42,7 @@ const Home = (props) => {
     const modelNames = ["Model S", "Model 3", "Model X"];
     const [i, setI] = useState(1);
     const [mapData, setMapData] = useState();
-    const [displayMapSidebar, setDisplayMapSidebar] = useState(true);
+    const [displayMapSidebar, setDisplayMapSidebar] = useState(false);
     
     const mediaSection_1 = window.innerWidth > props.breakpoint ? homeDesktop : homeMobile;
     const mediaSection_2 = window.innerWidth > props.breakpoint ? energyDesktop : energyMobile;
@@ -141,12 +142,12 @@ const Home = (props) => {
                     </div>
                     {/* Section 4 */}
                     <div className="section">
-                        <div className="row m-0 position-relative h-100">
+                        
                             <Map items={superchargers} widthVw="100vw" heightVh="100vh" sendItem={(item) => (setMapData(item), setDisplayMapSidebar(true))}/>
                             <div className="col-12 col-md-3 position-absolute mapSidebarContainer">
-                                <MapSidebar onClick={() => setDisplayMapSidebar(false)} {...mapData}/>
+                                {displayMapSidebar && <MapSidebar onClick={() => setDisplayMapSidebar(false)} {...mapData}/>}
                             </div>
-                        </div>
+                        
                     </div>
                 </>
             </ReactFullpage.Wrapper>
