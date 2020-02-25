@@ -67,7 +67,7 @@ a > span
     text-decoration: underline; 
     font-size: 15px;
 }
-@media (max-width: 750px)
+@media screen and (max-width: 750px)
 {
     .modelsName
     {
@@ -106,7 +106,7 @@ a > span
         top: unset;
         transform: unset;
         bottom: 0;
-        margin-bottom: 15%;
+        margin-bottom: 20%;
     }
     
 }

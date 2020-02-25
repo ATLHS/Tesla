@@ -13,7 +13,6 @@ import superchargers from '../data/superchargers-location.json';
 import { FontAwesomeIcon  } from '@fortawesome/react-fontawesome';
 import {faMapMarker, faTimes} from '@fortawesome/free-solid-svg-icons';
 import '../css/home.css';
-import MobileNavbar from './layout/MobileNavbar';
 
 const MapSidebar = (props) => {
     return (
@@ -88,8 +87,6 @@ const Home = (props) => {
         scrollingSpeed = {1000}
         navigation
         normalScrollElements = {".homeSection4"}
-        // dragAndMove = {true}
-        touchSensitivity = {10}
         render={() => {
         return (
             <ReactFullpage.Wrapper>
@@ -97,7 +94,7 @@ const Home = (props) => {
                    {/* Section 1 */}
                    <div className="section homeSection1">
                         <animated.img className="h-100 w-100 mediaSection-1" style={imgSpring} src={mediaSection_1} alt="Tesla-models"/>
-                        <div className="carousel-caption d-md-block">
+                        {/* <div className="carousel-caption d-md-block">
                             <h5 className="modelsName">{modelNames[i]}</h5>
                             <p className="modelsQuotes">{translateX !== 0 && 'Free Unlimited Supercharging.'}</p>
                         </div>
@@ -109,12 +106,12 @@ const Home = (props) => {
                             </div>
                         </div>
                         <span className="carousel-control-prev mt-auto mb-auto h-50" role="button" id="prev" onClick={translate}></span>
-                        <span className="carousel-control-next mt-auto mb-auto h-50"  role="button" id="next" onClick={translate}></span>
+                        <span className="carousel-control-next mt-auto mb-auto h-50"  role="button" id="next" onClick={translate}></span> */}
                    </div>
                    {/* Section 2 */}
                    <div className="section homeSection2">
-                        <img className="h-100 w-100 mediaSection-2" src={mediaSection_2} alt="Energy"/>
-                        <div className="carousel-caption d-md-block">
+                         <img className="h-100 w-100 mediaSection-2" src={mediaSection_2} alt="Energy"/>
+                        {/*<div className="carousel-caption d-md-block">
                             <h5 className="modelsName">Power Everything</h5>
                             <p className="modelsQuotes d-block">Solar and Powerwall</p>
                         </div>
@@ -124,15 +121,16 @@ const Home = (props) => {
                                 <button type="button" className="btn btn-outline-light btn-sm m-2 rounded-pill cta">ORDER SOLAR ROOF</button>
                                 <span className="d-block text-white visit-store">Learn more</span>
                             </div>
-                        </div>
+                        </div> */}
                    </div>
                    {/* Section 3 */}
                    <div className="section homeSection3">
-                       <div className="h-100 w-100 mediaSection-3">
-                       <video className="h-100 w-100" loop data-autoplay muted playsInline>
-                           <Video src={mediaSection_3} alt="Accessories-video" />
-                        </video>
+                      <div className="h-100 w-100 mediaSection-3">
+                            <video className="h-100 w-100" loop data-autoplay muted playsInline>
+                                <Video src={mediaSection_3} alt="Accessories-video" />
+                            </video>
                        </div>
+                        {/* 
                         <div className="carousel-caption d-md-block">
                             <h5 className="modelsName">Tesla Accessories</h5>
                         </div>
@@ -143,11 +141,11 @@ const Home = (props) => {
                         </div>
                     </div>
                     {/* Section 4 */}
-                    <div className="section homeSection4">
-                        <Map items={superchargers} widthVw="100vw" heightVh="100vh" sendItem={(item) => (setMapData(item), setDisplayMapSidebar(true))}/>
+                    {/* <div className="section homeSection4">
+                        <Map items={superchargers} widthVw="100vw" heightVh="100vh" sendItem={ item => { setMapData(item); setDisplayMapSidebar(true); } }/>
                         <div className="col-12 col-md-3 position-absolute mapSidebarContainer">
-                            {displayMapSidebar && <MapSidebar onClick={() => setDisplayMapSidebar(false)} {...mapData}/>}
-                        </div>
+                            {displayMapSidebar && <MapSidebar onClick={() => { setDisplayMapSidebar(false) }} {...mapData}/>}
+                        </div>  */}
                     </div>
                 </>
             </ReactFullpage.Wrapper>
