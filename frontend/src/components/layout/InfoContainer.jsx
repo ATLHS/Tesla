@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../css/infoContainer.css';
 
 const InfoContainer = (props) => {
    return (

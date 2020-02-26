@@ -16,21 +16,22 @@ import Contact from './components/Contact';
 
 function App() {  
     const [toggle, setToggle] = useState(false);
-    const [navColor, setNavColor] = useState("white");
-    let mobilNav;
-    let backdrop;
+    const [navColor, setNavbarColor] = useState("white");
+    let mobilNav
+    let backdrop
+
     if(toggle){
-        mobilNav = <MobileNavbar mobileNavStatut={toggle} blackNavItem={() => setNavColor("black")} whiteNavItem={() => setNavColor("white")} linkColor={navColor} enableMobileMenu={() => setToggle(!toggle)}/>
+        mobilNav = <MobileNavbar mobileNavStatut={toggle} setNavColor={color => {setNavbarColor(color)}} linkColor={navColor} enableMobileMenu={() => setToggle(!toggle)}/>
         backdrop = <Backdrop enableMobileMenu={() => setToggle(!toggle)} />
         document.body.classList.add('position-fixed');
     } else {
         document.body.classList.remove('position-fixed');
     }
-    
+
     return (
       <div className="container-fluid p-0">
       <Router> 
-        <DesktopNavbar breakpoint={750} blackNavItem={() => setNavColor("black")} whiteNavItem={() => setNavColor("white")} linkColor={navColor} enableMobileMenu={() => setToggle(!toggle)} />
+        <DesktopNavbar breakpoint={750} setNavColor={color => {setNavbarColor(color)}} linkColor={navColor} enableMobileMenu={() => setToggle(!toggle)} />
         {mobilNav}
         {backdrop}
         <Switch>

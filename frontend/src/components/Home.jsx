@@ -94,26 +94,57 @@ const Home = (props) => {
                    {/* Section 1 */}
                    <div className="section homeSection1">
                         <animated.img className="h-100 w-100 mediaSection-1" style={imgSpring} src={mediaSection_1} alt="Tesla-models"/>
-                       
+                        <div className="carousel-caption d-md-block">
+                            <h5 className="modelsName">{modelNames[i]}</h5>
+                            <p className="modelsQuotes">{translateX !== 0 && 'Free Unlimited Supercharging.'}</p>
+                        </div>
+                        <div className="row position-absolute w-100 m-auto btn-row">
+                            <div className="col-md-12 text-center">
+                                <button type="button" className="btn btn-light border-light btn-sm m-2 rounded-pill cta">CUSTOM ORDER</button>
+                                <button type="button" className="btn btn-outline-light btn-sm m-2 rounded-pill cta">EXISTING INVENTORY</button>
+                                <span className="d-block text-white visit-store">Visit a store</span>
+                            </div>
+                        </div>
+                        <span className="carousel-control-prev mt-auto mb-auto h-50" role="button" id="prev" onClick={translate}></span>
+                        <span className="carousel-control-next mt-auto mb-auto h-50"  role="button" id="next" onClick={translate}></span>
                    </div>
                    {/* Section 2 */}
                    <div className="section homeSection2">
-                         <img className="h-100 w-100 mediaSection-2" src={mediaSection_2} alt="Energy"/>
-                        
-                   </div>
+                        <img className="h-100 w-100 mediaSection-2" src={mediaSection_2} alt="Energy"/>
+                        <div className="carousel-caption d-md-block">
+                            <h5 className="modelsName">Power Everything</h5>
+                            <p className="modelsQuotes d-block">Solar and Powerwall</p>
+                        </div>
+                        <div className="row position-absolute w-100 m-auto btn-row pt-4">
+                            <div className="col-md-12 text-center">
+                                <button type="button" className="btn btn-outline-light btn-sm m-2 rounded-pill cta">ORDER SOLAR PANELS</button>
+                                <button type="button" className="btn btn-outline-light btn-sm m-2 rounded-pill cta">ORDER SOLAR ROOF</button>
+                                <span className="d-block text-white visit-store">Learn more</span>
+                            </div>
+                        </div>
+                    </div>
                    {/* Section 3 */}
                    <div className="section homeSection3">
-                      <div className="h-100 w-100 mediaSection-3">
-                            <video className="h-100 w-100" loop data-autoplay muted playsInline>
+                        <div className="h-100 w-100">
+                            <video className="h-100 w-100 mediaSection-3" loop data-autoplay muted playsInline>
                                 <Video src={mediaSection_3} alt="Accessories-video" />
                             </video>
-                       </div>
-                       
-                      
+                        </div>
+                        <div className="carousel-caption d-md-block">
+                            <h5 className="modelsName">Tesla Accessories</h5>
+                        </div>
+                        <div className="row position-absolute w-100 m-auto btn-row pt-1">
+                            <div className="col-md-12 text-center">
+                                <button type="button" className="btn btn-light border-light btn-sm m-2 rounded-pill cta">SHOP NOW</button>
+                            </div>
+                        </div>
                     </div>
                     {/* Section 4 */}
-                    <div>
+                    <div className="section homeSection4">
                         <Map items={superchargers} widthVw="100vw" heightVh="100vh" sendItem={ item => { setMapData(item); setDisplayMapSidebar(true); } }/>
+                        <div className="col-12 col-md-3 position-absolute mapSidebarContainer">
+                            {displayMapSidebar && <MapSidebar onClick={() => { setDisplayMapSidebar(false) }} {...mapData}/>}
+                        </div>
                     </div>
                 </>
             </ReactFullpage.Wrapper>
