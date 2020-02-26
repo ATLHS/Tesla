@@ -13,7 +13,8 @@ const Map = (props) => {
 
       
       return (
-        <MapGL
+        <div className="homeSection4">
+            <MapGL
             {...viewport}
             width={props.widthVw}
             height={props.heightVh}
@@ -41,6 +42,7 @@ const Map = (props) => {
             </Marker>
         ) )}
         </MapGL>
+        </div>
       );
 
 }

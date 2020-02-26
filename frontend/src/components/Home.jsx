@@ -22,7 +22,7 @@ const MapSidebar = (props) => {
                     <FontAwesomeIcon className="text-dark" style={{fontSize:"20px"}} icon={faMapMarker} size="sm" />
                     <h5 className="alert-heading mb-0 ml-3">{props.n_enseigne}</h5>
                 </div>
-                <FontAwesomeIcon onClick={props.onClick} className="text-dark" style={{fontSize:"20px", height: "20px", width: "20px"}} icon={faTimes} size="sm" />
+                <FontAwesomeIcon onClick={props.onClick} className="text-dark" style={{fontSize:"20px", height: "20px", width: "20px", cursor: "pointer"}} icon={faTimes} size="sm" />
             </div>
             <hr className="text-light w-100 mapSidebarHr"/>
             <p className="display-4 text-dark text-left map-heading text-left">{props.n_station}</p>
@@ -87,7 +87,7 @@ const Home = (props) => {
         scrollingSpeed = {1000}
         navigation
         normalScrollElements = {".homeSection4"}
-        render={() => {
+        render={({state, fullpageApi}) => {
         return (
             <ReactFullpage.Wrapper>
                 <>
@@ -141,7 +141,11 @@ const Home = (props) => {
                     </div>
                     {/* Section 4 */}
                     <div className="section homeSection4">
+                        <div className="position-absolute w-50 mt-5 text-center mapCta">
+                            <button type="button" className="btn btn-outline-light btn-sm rounded-pill cta" onClick={() => {fullpageApi.moveSectionUp()}}>Section précédente</button>
+                        </div>
                         <Map items={superchargers} widthVw="100vw" heightVh="100vh" sendItem={ item => { setMapData(item); setDisplayMapSidebar(true); } }/>
+                        
                         <div className="col-12 col-md-3 position-absolute mapSidebarContainer">
                             {displayMapSidebar && <MapSidebar onClick={() => { setDisplayMapSidebar(false) }} {...mapData}/>}
                         </div>
