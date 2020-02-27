@@ -38,6 +38,14 @@ a > span
     font-weight: lighter;
     display: none;
 }
+.S3HomeTitle
+{
+    top: 20%;
+}
+.S3HomeCta
+{
+    top: 25%;
+}
 .map-heading
 {
     font-size: 25px;
@@ -49,7 +57,7 @@ a > span
 }
 .cta
 {
-    width: 19%;
+    width: 20%;
     border: solid 3px;
     padding: 8px;
 }
@@ -118,6 +126,15 @@ a > span
     .mapCta
     {
         display: block;
+    }
+    .S3HomeTitle
+    {
+        top: 20%;
+    }
+    .S3HomeCta
+    {
+        top: unset;
+        bottom: 25%;
     }
     
 }
