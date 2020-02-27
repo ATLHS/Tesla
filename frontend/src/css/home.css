@@ -12,6 +12,13 @@ a > span
 {
     top: 15%;
 }
+video
+{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
 .modelsName
 {
     font-size: 45px;
@@ -19,10 +26,7 @@ a > span
     font-weight: bold;
     margin-top: -2%;
 }
-.section2
-{
-    margin-top: 6% !important;
-}
+
 .btn-row
 {
     z-index: 1000;
@@ -41,10 +45,12 @@ a > span
 .S3HomeTitle
 {
     top: 20%;
+    z-index: 1;
 }
 .S3HomeCta
 {
     top: 25%;
+    z-index: 1;
 }
 .map-heading
 {
