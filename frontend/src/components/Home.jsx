@@ -127,13 +127,18 @@ const Home = (props) => {
                    <div className="section homeSection3">
                         <div className="row position-absolute m-auto w-100 S3HomeTitle">
                             <div className="col-md-12 text-center">
-                                <h5 className="text-dark modelsName">Tesla Accessories</h5>
+                                <h5 className="text-white modelsName">Tesla Accessories</h5>
                             </div>
                         </div>
                         <div className="row position-absolute m-auto w-100 S3HomeCta">
                             <div className="col-md-12 text-center">
-                                <button type="button" className="btn btn-outline-dark border-dark btn-sm m-2 rounded-pill cta">SHOP NOW</button>
+                                <button type="button" className="btn btn-outline-light border-light btn-sm m-2 rounded-pill cta">SHOP NOW</button>
                             </div>
+                        </div>
+                        <div className="h-100 w-100">
+                            <video className="h-100 w-100 mediaSection-3" preload="auto" loop data-autoplay muted playsInline>
+                                <Video src={mediaSection_3} alt="Accessories-video" />
+                            </video>
                         </div>
                     </div>
                     {/* Section 4 */}
