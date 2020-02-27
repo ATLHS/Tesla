@@ -126,7 +126,7 @@ const Home = (props) => {
                    {/* Section 3 */}
                    <div className="section homeSection3">
                         <div className="h-100 w-100">
-                            <video className="h-100 w-100 mediaSection-3" loop data-autoplay muted playsInline>
+                            <video className="h-100 w-100 mediaSection-3" preload="auto" loop data-autoplay muted playsInline>
                                 <Video src={mediaSection_3} alt="Accessories-video" />
                             </video>
                         </div>
@@ -145,7 +145,6 @@ const Home = (props) => {
                             <button type="button" className="btn btn-outline-light btn-sm rounded-pill cta" onClick={() => {fullpageApi.moveSectionUp()}}>Section précédente</button>
                         </div>
                         <Map items={superchargers} widthVw="100vw" heightVh="100vh" sendItem={ item => { setMapData(item); setDisplayMapSidebar(true); } }/>
-                        
                         <div className="col-12 col-md-3 position-absolute mapSidebarContainer">
                             {displayMapSidebar && <MapSidebar onClick={() => { setDisplayMapSidebar(false) }} {...mapData}/>}
                         </div>
