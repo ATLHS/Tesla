@@ -7,7 +7,7 @@ import '../../css/mobileNavbar.css';
 
 const MobileNavbar = (props) => {
     const mobilMenuSpring = useSpring({transform: 'translateX(35%)', from: {zIndex: 1500, transform: 'translateX(100%)'}});
-    return (
+    return ( 
         <animated.nav className="navbar navbar-expand-lg navbar-light bg-white shadow w-75 h-100 position-fixed mobileNav" style={props.mobileNavStatut && mobilMenuSpring}>
             <div className="collapse navbar-collapse d-flex justify-content-left w-100 h-100 flex-column">
                 <ul className="navbar-nav w-100 h-75 h-75 d-flex justify-content-between">
@@ -15,28 +15,28 @@ const MobileNavbar = (props) => {
                         <span onClick={props.enableMobileMenu} className="mobile-link"><FontAwesomeIcon icon={faTimes} size="lg" /></span>
                     </li>
                     <li onClick={props.enableMobileMenu} className="nav-item nav-li pt-0">
-                    <Link style={{color: props.linkColor }} onClick={props.whiteNavItem} className="nav-link mobile-link text-dark" to="/models">MODEL S</Link>
+                    <Link style={{color: props.linkColor }} onClick={() => props.setNavColor("white")} className="nav-link mobile-link text-dark" to="/models">MODEL S</Link>
                     </li>
                     <li onClick={props.enableMobileMenu} className="nav-item nav-li pt-0">
-                    <Link style={{color: props.linkColor }} onClick={props.whiteNavItem} className="nav-link mobile-link text-dark" to="/model3">MODEL 3</Link>
+                    <Link style={{color: props.linkColor }} onClick={() => props.setNavColor("white")} className="nav-link mobile-link text-dark" to="/model3">MODEL 3</Link>
                     </li>
                     <li onClick={props.enableMobileMenu} className="nav-item nav-li pt-0">
-                    <Link style={{color: props.linkColor }} onClick={props.whiteNavItem} className="nav-link mobile-link text-dark" to="/modelx">MODEL X</Link>
+                    <Link style={{color: props.linkColor }} onClick={() => props.setNavColor("white")} className="nav-link mobile-link text-dark" to="/modelx">MODEL X</Link>
                     </li>
                     <li onClick={props.enableMobileMenu} className="nav-item nav-li pt-0">
-                    <Link style={{color: props.linkColor }} onClick={props.whiteNavItem} className="nav-link mobile-link text-dark" to="/modely">MODEL Y</Link>
+                    <Link style={{color: props.linkColor }} onClick={() => props.setNavColor("white")} className="nav-link mobile-link text-dark" to="/modely">MODEL Y</Link>
                     </li>
                     <li onClick={props.enableMobileMenu} className="nav-item nav-li pt-0">
-                    <Link style={{color: props.linkColor }} onClick={props.whiteNavItem} className="nav-link mobile-link text-dark" to="/cybertruk">CYBERTRUCK</Link>
+                    <Link style={{color: props.linkColor }} onClick={() => props.setNavColor("white")} className="nav-link mobile-link text-dark" to="/cybertruk">CYBERTRUCK</Link>
                     </li>
                     <li onClick={props.enableMobileMenu} className="nav-item nav-li pt-0">
-                    <Link style={{color: props.linkColor }} onClick={props.blackNavItem} className="nav-link mobile-link text-dark" to="/roadster">ROADSTER</Link>
+                    <Link style={{color: props.linkColor }} onClick={() => props.setNavColor("black")} className="nav-link mobile-link text-dark" to="/roadster">ROADSTER</Link>
                     </li>
                     <li onClick={props.enableMobileMenu} className="nav-item nav-li pt-0">
-                    <Link style={{color: props.linkColor }} onClick={props.whiteNavItem} className="nav-link mobile-link text-dark" to="/energy">ENERGY</Link>
+                    <Link style={{color: props.linkColor }} onClick={() => props.setNavColor("white")} className="nav-link mobile-link text-dark" to="/energy">ENERGY</Link>
                     </li>
                     <li onClick={props.enableMobileMenu} className="nav-item nav-li pt-0">
-                        <Link style={{color: props.linkColor }} onClick={props.blackNavItem} className="nav-link mobile-link text-dark" to="/contact">CONTACT</Link>
+                        <Link style={{color: props.linkColor }} onClick={() => props.setNavColor("black")} className="nav-link mobile-link text-dark" to="/contact">CONTACT</Link>
                     </li>
                 </ul>
             </div>

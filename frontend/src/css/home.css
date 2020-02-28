@@ -135,12 +135,17 @@ video
     }
     .S3HomeTitle
     {
-        top: 20%;
+        top: 25%;
     }
     .S3HomeCta
     {
         top: unset;
         bottom: 15%;
     }
+    .fp-viewing-3 .fp-right
+    {
+        display: none;
+    }
+    
     
 }
