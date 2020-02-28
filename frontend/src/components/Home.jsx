@@ -128,16 +128,7 @@ const Home = (props) => {
                         <video className="position-absolute w-100 h-100" loop muted data-autoplay playsInline>
                             <Video src={mediaSection_3} alt="Accessories-video" />
                         </video>
-                        <div className="row position-absolute m-auto w-100 S3HomeTitle">
-                            <div className="col-md-12 text-center">
-                                <h5 className="text-light modelsName">Tesla Accessories</h5>
-                            </div>
-                        </div>
-                        <div className="row position-absolute m-auto w-100 S3HomeCta">
-                            <div className="col-md-12 text-center">
-                                <button type="button" className="btn btn-outline-light border-light btn-sm m-2 rounded-pill cta">SHOP NOW</button>
-                            </div>
-                        </div>
+                        
                     </div>
                     {/* Section 4 */}
                     <div className="section homeSection4">
