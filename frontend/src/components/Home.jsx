@@ -125,6 +125,9 @@ const Home = (props) => {
                     </div>
                    {/* Section 3 */}
                    <div className="section homeSection3">
+                        <video className="position-absolute w-100 h-100" loop muted data-autoplay playsInline>
+                            <Video src={mediaSection_3} alt="Accessories-video" />
+                        </video>
                         <div className="row position-absolute m-auto w-100 S3HomeTitle">
                             <div className="col-md-12 text-center">
                                 <h5 className="text-light modelsName">Tesla Accessories</h5>
@@ -135,9 +138,6 @@ const Home = (props) => {
                                 <button type="button" className="btn btn-outline-light border-light btn-sm m-2 rounded-pill cta">SHOP NOW</button>
                             </div>
                         </div>
-                        <video className="position-absolute w-100 h-100" loop data-autoplay muted playsInline>
-                            <Video src={mediaSection_3} alt="Accessories-video" />
-                        </video>
                     </div>
                     {/* Section 4 */}
                     <div className="section homeSection4">

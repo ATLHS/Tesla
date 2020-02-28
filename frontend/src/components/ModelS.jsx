@@ -18,7 +18,7 @@ const ModelS = (props) => {
             <div className="section homeSection1">
                 <img className="h-100 w-100 mediaSection-1" src={mediaSection_1} alt="Model S"/>
                 <InfoContainer color="text-dark" headline="Model S" /> 
-                <ModelDescription color="text-dark" hrColor="border-dark" technical1="2.4s" info1={"From 0-60 \n mph"} technical2="28 cu ft" info2="Best in class Storage" technical3="373mi" info3="Range (EPA)" cta="ORDER NOW" />
+                <ModelDescription color="text-dark" hrColor="border-dark" technical1="2.4s" info1={"From 0-60 \n mph"} technical2="28 cu ft" info2="Best in class Storage" technical3="373mi" info3={"Range \n (EPA)"} cta="ORDER NOW" />
             </div>
         </>
         </ReactFullpage.Wrapper>
